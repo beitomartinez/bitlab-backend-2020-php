@@ -88,4 +88,114 @@ $price = 66.666667;
 // echo ucfirst('roberto');
 // echo strpos('Roberto', 'be');
 // echo strpos('Roberto', 'bo');
-echo trim(' Hola Amigos ');
+// echo trim(' Hola Amigos ');
+
+
+
+// ----------------- ARREGLOS
+
+$vegetables = array('chile verde', 'cebolla', 'tomate');
+// var_dump($vegetables);
+// print_r($vegetables);
+
+$vowels = ['a', 'e', 'i', 'o', 'u'];
+// print_r($vowels);
+
+$teacher = [
+    'first_name' => 'Roberto',
+    'apodo' => 'Roberto',
+    'last_name' => 'Martínez',
+    1 => 'Hola mundo',
+    'age' => 33,
+    'city' => 'San Salvador',
+    'hobbies' => [
+        'Guitarra',
+        'Computadoras',
+        'Tomar café',
+        'Ver TV'
+    ],
+    'foods' => [
+        'favorite' => 'Hamburguesas',
+        'not_favorite' => 'Pescado',
+    ]
+];
+
+// print_r($teacher[10]);
+
+$crazyArray = [
+    1 => 'a',
+    '1' => 'b',
+    1.5 => 'c',
+    true => 'd'
+];
+
+// print_r($crazyArray);
+
+$fruits = ['manzanas', 'peras', 'sandías'];
+$fruits[] = 'fresas'; // empujar valores
+
+$fruits[0] = 'melocotones';
+
+$teacher['first_name'] = 'Roberto'; // actualizar clave
+$teacher['country'] = 'El Salvador'; // agregar clave
+
+// print_r($teacher);
+
+
+// Ejemplos de funciones
+
+// print_r($teacher);
+// unset($teacher['age']);
+// print_r($teacher);
+
+// echo count($teacher);
+
+$arr1 = ['a', 'e', 'i', 'o', 'u'];
+$arr2 = ['a', 'b', 'c', 'u'];
+$arr3 = ['u', 'a', 'u', 'i'];
+
+// print_r(array_diff($arr1, $arr2));
+// print_r(array_diff($arr1, $arr2, $arr3));
+
+// print_r(array_intersect($arr1, $arr2));
+// print_r(array_intersect($arr1, $arr2, $arr3));
+
+// print_r(array_merge($arr1, $arr2, $arr3));
+
+// $removed = array_shift($arr1);
+// print_r($removed);
+// echo '-----------';
+// print_r($arr1);
+
+// array_shift($arr1);
+// print_r($arr1);
+
+// array_shift($teacher);
+// print_r($teacher);
+
+// array_unshift($arr1, 'x', 'y', 'z');
+// print_r($arr1);
+
+// array_unshift($teacher, 2, 3);
+// print_r($teacher);
+
+// array_splice($arr1, 2, 1); // quitamos a letra i
+// array_splice($arr1, 0, 3);
+// print_r($arr1);
+
+// array_splice($teacher, 0, 5);
+// print_r($teacher);
+
+// print_r(array_search('i', $vowels));
+// print_r(array_search('Roberto', $teacher));
+
+// print_r(array_reverse($vowels));
+
+// $arrx = [2,6,3,4,8,1,2,9,4,5,9,0,2,3,5,6,2,7,3];
+// rsort($arrx);
+// print_r($arrx);
+
+$myNull = null;
+
+// $string = '';
+// $integer = [];
