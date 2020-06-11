@@ -213,13 +213,13 @@ $students = [
     ['Ana', ['Clavo y Canela', 'San Martín', 'ensaladas', 'Cebollines']],
 ];
 
-for ($i = 0; $i < count($students); $i++) {
-    echo "Las comidas favoritas de {$students[$i][0]} son:<br>";
-    for ($j = 0; $j < count($students[$i][1]); $j++) {
-        echo "- {$students[$i][1][$j]} <br>";
-    }
-    echo '<hr>';
-}
+// for ($i = 0; $i < count($students); $i++) {
+//     echo "Las comidas favoritas de {$students[$i][0]} son:<br>";
+//     for ($j = 0; $j < count($students[$i][1]); $j++) {
+//         echo "- {$students[$i][1][$j]} <br>";
+//     }
+//     echo '<hr>';
+// }
 
 $students = [
 	[
@@ -239,21 +239,261 @@ $students = [
 	],
 ];
 
-for ($i = 0; $i < count($students); $i++) {
-    echo "Las comidas favoritas de {$students[$i]['name']} son:<br>";
-    for ($j = 0; $j < count($students[$i]['foods']); $j++) {
-        echo "- {$students[$i]['foods'][$j]} <br>";
-    }
-    echo '<br>';
+// for ($i = 0; $i < count($students); $i++) {
+//     echo "Las comidas favoritas de {$students[$i]['name']} son:<br>";
+//     for ($j = 0; $j < count($students[$i]['foods']); $j++) {
+//         echo "- {$students[$i]['foods'][$j]} <br>";
+//     }
+//     echo '<br>';
     
-    echo "Los géneros musicales favoritos de {$students[$i]['name']} son:<br>";
-    for ($j = 0; $j < count($students[$i]['genres']); $j++) {
-        echo "- {$students[$i]['genres'][$j]} <br>";
+//     echo "Los géneros musicales favoritos de {$students[$i]['name']} son:<br>";
+//     for ($j = 0; $j < count($students[$i]['genres']); $j++) {
+//         echo "- {$students[$i]['genres'][$j]} <br>";
+//     }
+
+//     echo '<hr>';
+// }
+
+// echo '<br><br><br><br><br><br>';
+// echo "i vale $i <br>";
+// echo "j vale $j <br>";
+
+
+// ----------------------- FOREACH
+
+$fruits = ['bananas', 'peras', 'sandías', 'uvas', 'fresas'];
+
+// foreach ($fruits as $fruit) {
+//     echo "Me gustan las $fruit <br>";
+// }
+
+// foreach ($fruits as $z => $item) {
+//     echo "La fruta en la posición $z es $item<br>";
+// }
+
+
+$what = 'Roberto';
+$names = ['José', 'Roberto', 'Carlos', 'Miguel', 'Pedro', 'Roberto'];
+
+// foreach ($names as $name) {
+//     if ($name == $what) {
+//         echo '¡Lo encontré!<br>';
+//     }
+// }
+
+// foreach ($names as $i => $name) {
+//     if ($name == $what) {
+//         echo "¡Lo encontré! Está en la posición $i<br>";
+//     }
+// }
+
+// print_r($names);
+// echo '--------';
+// foreach ($names as $i => $name) {
+//     $names[$i] = 'Roberto';
+// }
+// print_r($names);
+
+// print_r($names);
+// echo '--------';
+// foreach ($names as &$name) {
+//     $name = 'Daniel';
+// }
+// print_r($names);
+
+// foreach ($names as $i => $name) {
+//     echo "-$name<br>";
+// }
+
+// echo "El último valor de i fue $i<br>";
+// echo "El último valor de name fue $name<br>";
+
+// $teacher = [
+//     'first_name' => 'Roberto',
+//     'last_name' => 'Martínez',
+//     'age' => 33,
+//     'city' => 'San Salvador'
+// ];
+
+// echo 'Aquí está la info del teacher:<br><br>';
+
+// foreach ($teacher as $key => $value) {
+//     echo "$key: $value<br>";
+// }
+
+$studentsAges = [
+    'Juan' => 22,
+    'David' => 19,
+    'Carmen' => 19,
+    'Ricardo' => 25,
+    'Cecibel' => 19,
+];
+
+// foreach ($studentsAges as $name => $age) {
+//     echo "$name tiene $age años<br>";
+// }
+
+$lookingFor = 19;
+
+// foreach ($studentsAges as $name => $age) {
+//     if ($age == $lookingFor) {
+//         echo "$name tiene $lookingFor años<br>"; // podemos usar $age o $lookingFor
+//     }
+// }
+
+
+$ordinals = [
+    'uno' => 'primero',
+    'dos' => 'segundo',
+    'tres' => 'tercero',
+];
+
+// foreach ($ordinals as $number) {
+//     echo $number . "<br>";
+//     if ($number == 'segundo') {
+//         break;
+//     }
+// }
+
+$i = 0;
+
+// while ($i < 5) {
+//     foreach ($ordinals as $number) {
+//         echo $number . "<br>";
+//         if ($number == 'tercero') {
+//             break 2;
+//         }
+//     }
+
+//     $i++;
+// }
+
+$countries = [
+    'El Salvador', // 0
+    'Guatemala',// 1
+    'Honduras', //2 
+    'Nicaragua', // 3
+    'Costa Rica', //4
+];
+
+// for ($i = 0; $i < 5; $i++) { // un total de 5 veces
+//     for ($j = 0; $j < count($countries); $j++) { //iteres entre cada país
+
+//         echo $countries[$j] . "<br>";
+
+
+//         if ($j == 4) {
+//             break 2; // se sale inmediatamente de los dos
+//         }
+//     }
+
+//     echo '-------<br>';
+// }
+
+
+// $students = ['Ricardo', 'Carlos', 'Diego', 'David', 'Roberto'];
+// $money = 180;
+// $payment = 35;
+
+// while ($money > 0) {
+//     foreach ($students as $student) {
+//         if (($money - $payment) < 0) { // me alcanza para hacer un pago más?
+//             break 2; // rompemos para no quedar en negativo
+//         }
+
+//         echo "Le di $$payment.00 a $student<br>";
+//         $money -= $payment;
+//         echo "Quedan $money<br>-------<br>";
+//     }
+//     // 30$ * 5 personas = 150, menos los 180 iniciales = 30
+// }
+
+$students = ['Ricardo', 'Carlos', 'Diego', 'David', 'Roberto', 'José'];
+$money = 200;
+
+// while ($money > 0) {
+//     foreach ($students as $student) {
+//         if (($money - 20) < 0) { // me alcanza para hacer un pago más?
+//             break 2; // rompemos para no quedar en negativo
+//         }
+
+//         if ($student == 'Roberto') {
+//             continue;
+//         }
+
+//         $money -= 20;
+//         echo "Le di $20.00 a $student<br>";
+//         echo "Quedan $money<br>-------<br>";
+//     }
+// }
+
+// while ($money > 0) {
+//     foreach ($students as $student) {
+//         if (($money - 20) < 0) { // me alcanza para hacer un pago más?
+//             break 2; // rompemos para no quedar en negativo
+//         }
+
+//         if ($student == 'Roberto') {
+//             $money -= 40;
+//             echo "Le di $40.00 a $student<br>";
+//             echo "Quedan $money<br>-------<br>";
+
+//             continue;
+//         }
+
+//         $money -= 20;
+//         echo "Le di $20.00 a $student<br>";
+//         echo "Quedan $money<br>-------<br>";
+//     }
+// }
+
+$country = 'Colombia';
+
+// switch ($country) {
+//     case 'El Salvador':
+//         echo 'sv';
+//         break;
+//     case 'Nicaragua':
+//         echo 'ni';
+//         break;
+//     case 'Guatemala':
+//         echo 'gt';
+//         break;
+//     case 'Honduras':
+//         echo 'hn';
+//         break;
+//     case 'Panamá':
+//         echo 'pa';
+//         break;
+//     case 'Costa Rica':
+//         echo 'cr';
+//         break;
+//     default:
+//         echo 'N/D';
+//         break;
+// }
+
+$a = 5;
+$b = 7;
+
+// switch ($b - $a) {
+//     case 44:
+//         echo 'Resultado 44';
+//         break;
+//     case 2:
+//         echo 'Resultado 2';
+//         break;
+//     case 8:
+//         echo 'Resultado 8';
+//         break;
+// }
+
+function calcComission($sale) {
+    if ($sale > 100) {
+        return $sale * 0.2;
     }
 
-    echo '<hr>';
+    return $sale * 0.1;
 }
 
-echo '<br><br><br><br><br><br>';
-echo "i vale $i <br>";
-echo "j vale $j <br>";
+echo 'Tu comisión es $' . number_format(calcComission(1345.66), 2);
